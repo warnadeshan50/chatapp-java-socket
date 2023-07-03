@@ -1,0 +1,44 @@
+.jfx-text-field
+{
+    -fx-background-color: #CCD5AE;
+    -fx-border-radius: 5 5 5 5;
+    -fx-border-width: 2;
+    -fx-font-size: 14;
+}
+.jfx-text-field
+{
+    -fx-background-color: #CCD5AE;
+    -fx-border-radius: 5 5 5 5;
+    -fx-border-width: 2;
+    -fx-font-size:14 ;
+
+}
+.jfx-text-field:hover
+{
+    -fx-background-color: #B3C890;
+    -fx-border-radius: 5 5 5 5;
+    -fx-border-width: 2;
+    -fx-font-size:14 ;
+}
+.jfx-button
+{
+    -fx-background-radius: 5 5 5 5;
+    -fx-background-color: #A0C49D;
+    -fx-font-size: 14;
+    -fx-border-radius: 5 5 5 5;
+}
+.jfx-button
+{
+    -fx-background-radius: 5 5 5 5;
+    -fx-background-color: #A0C49D;
+    -fx-font-size: 14;
+    -fx-border-radius: 5 5 5 5;
+}
+.jfx-button:hover
+{
+    -fx-background-radius: 5 5 5 5;
+    -fx-background-color: #1F6E8C;
+    -fx-font-size: 14;
+    -fx-border-radius: 5 5 5 5;
+    -fx-border-color: #1F6E8C;
+}

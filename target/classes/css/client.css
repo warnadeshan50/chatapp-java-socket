@@ -1,0 +1,34 @@
+.jfx-button
+{
+    -fx-border-radius: 0 5 5 0;
+    -fx-background-color: #525FE1;
+    -fx-background-radius: 0 5 5 0;
+}
+.jfx-button
+{
+    -fx-border-radius: 0 5 5 0;
+    -fx-background-color: #525FE1;
+    -fx-background-radius: 0 5 5 0;
+}
+.jfx-button:hover
+{
+    -fx-border-radius: 0 5 5 0;
+    -fx-background-color: #525FE1;
+    -fx-background-radius: 0 5 5 0;
+}
+.jfx-textField
+{
+    -fx-border-radius: 0 5 5 0;
+    -fx-background-color: #FFCDA8;
+    -fx-background-radius: 5 5 5 5 ;
+}
+.image-view
+{
+    -fx-background-radius: 50 50 50 50;
+    -fx-border-radius: 50 50 50 50;
+}
+.image-view
+{
+    -fx-background-radius: 50 50 50 50;
+    -fx-border-radius: 50 50 50 50;
+}
