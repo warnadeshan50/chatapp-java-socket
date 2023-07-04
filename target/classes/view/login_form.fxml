@@ -6,21 +6,23 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 
 <AnchorPane prefHeight="286.0" prefWidth="600.0" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatapp.controller.LoginFormController">
    <children>
-      <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="190.0" layoutY="143.0" prefHeight="25.0" prefWidth="220.0" promptText="User Name" stylesheets="@../css/login.css" />
-      <JFXPasswordField focusColor="BLACK" labelFloat="true" layoutX="190.0" layoutY="196.0" prefHeight="25.0" prefWidth="220.0" promptText="Password" styleClass="jfx-text-field" stylesheets="@../css/login.css" />
+      <JFXTextField fx:id="username_txt" focusColor="BLACK" labelFloat="true" layoutX="190.0" layoutY="143.0" prefHeight="25.0" prefWidth="220.0" promptText="User Name" stylesheets="@../css/login.css" />
+      <JFXPasswordField fx:id="password_txt" focusColor="BLACK" labelFloat="true" layoutX="190.0" layoutY="196.0" prefHeight="25.0" prefWidth="220.0" promptText="Password" styleClass="jfx-text-field" stylesheets="@../css/login.css" />
       <JFXButton layoutX="399.0" layoutY="238.0" prefHeight="30.0" prefWidth="71.0" stylesheets="@../css/login.css" text="Login" />
-      <JFXButton layoutX="478.0" layoutY="238.0" stylesheets="@../css/login.css" text="Register" />
+      <JFXButton fx:id="save_btn" layoutX="478.0" layoutY="238.0" onAction="#save_btnOnAction" stylesheets="@../css/login.css" text="Register" />
       <JFXButton fx:id="add_pic" layoutX="25.0" layoutY="25.0" onAction="#add_picOnAction" text="Button">
          <graphic>
-            <ImageView fitHeight="99.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imageview" fitHeight="99.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/user.png" />
                </image>
             </ImageView>
          </graphic>
       </JFXButton>
+      <Circle fx:id="circle" fill="DODGERBLUE" layoutX="300.0" layoutY="70.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </AnchorPane>
