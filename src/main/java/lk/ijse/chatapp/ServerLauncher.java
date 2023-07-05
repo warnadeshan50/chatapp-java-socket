@@ -19,6 +19,7 @@ public class ServerLauncher extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("Server");
         primaryStage.centerOnScreen();
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }
