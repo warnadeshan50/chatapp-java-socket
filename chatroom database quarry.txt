@@ -1,0 +1,10 @@
+CREATE DATABASE chatroom;
+
+USE chatroom;
+
+CREATE TABLE user(
+user_name VARCHAR(50) PRIMARY KEY,
+password VARCHAR(20),
+photo BLOB
+);
+
