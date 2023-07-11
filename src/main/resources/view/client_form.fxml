@@ -7,16 +7,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="574.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatapp.controller.ClientFormController">
    <children>
-      <JFXTextArea fx:id="client_txtArea" layoutX="40.0" layoutY="48.0" prefHeight="461.0" prefWidth="443.0" promptText="Messagers......" stylesheets="@../css/server.css" />
+      <JFXTextArea fx:id="client_txtArea" editable="false" layoutX="40.0" layoutY="48.0" prefHeight="461.0" prefWidth="443.0" promptText="Messagers......" stylesheets="@../css/server.css" />
       <Label fx:id="client_lbl" layoutX="236.0" layoutY="14.0" text="Client">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="client_msg_txt" layoutX="50.0" layoutY="535.0" prefHeight="25.0" prefWidth="376.0" />
-      <JFXButton fx:id="send_btn" layoutX="441.0" layoutY="535.0" text="Send" />
+      <JFXTextField fx:id="client_msg_txt" layoutX="50.0" layoutY="535.0" onAction="#client_msg_txt" prefHeight="25.0" prefWidth="376.0" />
+      <JFXButton fx:id="send_btn" layoutX="441.0" layoutY="535.0" onAction="#send_btnOnAction" text="Send" />
    </children>
 </AnchorPane>

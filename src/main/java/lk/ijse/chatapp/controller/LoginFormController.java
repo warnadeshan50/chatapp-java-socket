@@ -11,7 +11,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.ImagePattern;
@@ -20,7 +19,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import lk.ijse.chatapp.bo.BOFactory;
 import lk.ijse.chatapp.bo.custom.UserBO;
-import lk.ijse.chatapp.dao.custom.UserDAO;
 import lk.ijse.chatapp.dto.UserDTO;
 
 import java.io.*;
@@ -151,6 +149,8 @@ public class LoginFormController implements Initializable {
         if(typePass.equals(password)){
             password_lbl.setVisible(false);
             System.out.println(password);
+            username_txt.clear();
+            password_txt.clear();
             Parent parent =FXMLLoader.load(getClass().getResource("/view/client_form.fxml"));
             Stage stage = new Stage();
             Scene scene = new Scene(parent);

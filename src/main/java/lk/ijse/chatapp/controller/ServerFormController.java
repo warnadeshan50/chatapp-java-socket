@@ -25,13 +25,13 @@ public class ServerFormController {
             try {
                 serverSocket = new ServerSocket(3003);
                 server_txtArea.appendText("Start Server");
-                serverSocket.accept();
-                server_txtArea.appendText("Accept Client");
+                socket=serverSocket.accept();
+                server_txtArea.appendText("\nAccept Client");
                 dataInputStream = new DataInputStream(socket.getInputStream());
                 dataOutputStream= new DataOutputStream(socket.getOutputStream());
                 while (!msg.equals("finish")){
                     msg=dataInputStream.readUTF();
-                    server_txtArea.appendText("Server : "+msg);
+                    server_txtArea.appendText("\nClient : "+msg);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
