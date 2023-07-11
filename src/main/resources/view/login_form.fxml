@@ -8,25 +8,34 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="286.0" prefWidth="600.0" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatapp.controller.LoginFormController">
-   <children>
-      <JFXTextField fx:id="username_txt" focusColor="BLACK" labelFloat="true" layoutX="190.0" layoutY="143.0" onAction="#username_txtOnAction" prefHeight="25.0" prefWidth="220.0" promptText="User Name" stylesheets="@../css/login.css" />
-      <JFXPasswordField fx:id="password_txt" focusColor="BLACK" labelFloat="true" layoutX="190.0" layoutY="196.0" onAction="#password_txtOnAction" prefHeight="25.0" prefWidth="220.0" promptText="Password" styleClass="jfx-text-field" stylesheets="@../css/login.css" />
-      <JFXButton fx:id="login_btn" layoutX="442.0" layoutY="253.0" onAction="#login_btnOnAction" prefHeight="30.0" prefWidth="71.0" stylesheets="@../css/login.css" text="Login" />
-      <JFXButton fx:id="save_btn" layoutX="525.0" layoutY="253.0" onAction="#save_btnOnAction" stylesheets="@../css/login.css" text="Create" />
-      <JFXButton fx:id="add_pic" layoutX="345.0" layoutY="85.0" onAction="#add_picOnAction" text="+Add" />
-      <Circle fx:id="circle" fill="DODGERBLUE" layoutX="300.0" layoutY="70.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label fx:id="username_lbl" layoutX="190.0" layoutY="173.0" text="* Wrong Username ! Create a Account" textFill="RED">
-         <font>
-            <Font name="System Italic" size="12.0" />
-         </font>
-      </Label>
-      <JFXButton fx:id="create_account_btn" layoutX="300.0" layoutY="253.0" onAction="#create_account_btnOnAction" prefHeight="17.0" prefWidth="126.0" text="Create a Account" />
-      <Label fx:id="password_lbl" layoutX="190.0" layoutY="230.0" text="* Wrong password !" textFill="RED">
-         <font>
-            <Font name="System Italic" size="12.0" />
-         </font>
-      </Label>
-      <JFXButton fx:id="back_btn" layoutX="447.0" layoutY="253.0" onAction="#back_btnOnAction" text="&lt; Back" />
-   </children>
+<AnchorPane prefHeight="286.0" prefWidth="600.0" stylesheets="@../css/login.css"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.ijse.chatapp.controller.LoginFormController">
+   <JFXTextField fx:id="username_txt" focusColor="BLACK" labelFloat="true" layoutX="190.0" layoutY="143.0"
+                 onAction="#username_txtOnAction" prefHeight="25.0" prefWidth="220.0" promptText="User Name"
+                 stylesheets="@../css/login.css"/>
+   <JFXPasswordField fx:id="password_txt" focusColor="BLACK" labelFloat="true" layoutX="190.0" layoutY="196.0"
+                     onAction="#password_txtOnAction" prefHeight="25.0" prefWidth="220.0" promptText="Password"
+                     styleClass="jfx-text-field" stylesheets="@../css/login.css"/>
+   <JFXButton fx:id="login_btn" layoutX="442.0" layoutY="253.0" onAction="#login_btnOnAction" prefHeight="30.0"
+              prefWidth="71.0" stylesheets="@../css/login.css" text="Login"/>
+   <JFXButton fx:id="save_btn" layoutX="525.0" layoutY="253.0" onAction="#save_btnOnAction"
+              stylesheets="@../css/login.css" text="Create"/>
+   <JFXButton fx:id="add_pic" layoutX="345.0" layoutY="85.0" onAction="#add_picOnAction" text="+Add"/>
+   <Circle fx:id="circle" fill="DODGERBLUE" layoutX="300.0" layoutY="70.0" radius="45.0" stroke="BLACK"
+           strokeType="INSIDE"/>
+   <Label fx:id="username_lbl" layoutX="190.0" layoutY="173.0" text="* Wrong Username ! Create a Account"
+          textFill="RED">
+      <font>
+         <Font name="System Italic" size="12.0"/>
+      </font>
+   </Label>
+   <JFXButton fx:id="create_account_btn" layoutX="300.0" layoutY="253.0" onAction="#create_account_btnOnAction"
+              prefHeight="17.0" prefWidth="126.0" text="Create a Account"/>
+   <Label fx:id="password_lbl" layoutX="190.0" layoutY="230.0" text="* Wrong password !" textFill="RED">
+      <font>
+         <Font name="System Italic" size="12.0"/>
+      </font>
+   </Label>
+   <JFXButton fx:id="back_btn" layoutX="447.0" layoutY="253.0" onAction="#back_btnOnAction" text="&lt; Back"/>
 </AnchorPane>
