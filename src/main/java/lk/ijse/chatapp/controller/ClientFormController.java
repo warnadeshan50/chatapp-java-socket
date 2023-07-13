@@ -7,6 +7,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -15,6 +16,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
@@ -35,12 +38,16 @@ public class ClientFormController extends Thread {
     private JFXButton send_btn;
 
     @FXML
+    private JFXButton image_send_btn;
+
+    @FXML
     VBox vBox;
 
     Socket socket;
     BufferedReader bufferedReader;
     PrintWriter printWriter;
-    String msg="";
+    File filePath;
+
 
     public void client_msg_txt(ActionEvent actionEvent) throws IOException {
         send_btnOnAction(actionEvent);
@@ -48,9 +55,9 @@ public class ClientFormController extends Thread {
 
     public void send_btnOnAction(ActionEvent actionEvent) throws IOException {
         String client_msg = client_msg_txt.getText();
-        printWriter.println(client_lbl.getText() + ": "+msg);
+        printWriter.println(client_lbl.getText() + ": "+client_msg);
         client_msg_txt.clear();
-        if (msg.equalsIgnoreCase("END CHAT")){
+        if (client_msg.equalsIgnoreCase("END CHAT")){
             System.exit(0);
         }
     }
@@ -72,7 +79,7 @@ public class ClientFormController extends Thread {
         try {
             while (true){
 
-                msg = bufferedReader.readLine();
+                String msg = bufferedReader.readLine();
                 String[] tokens = msg.split( " ");
                 String cmd = tokens[0];
 
@@ -83,7 +90,7 @@ public class ClientFormController extends Thread {
 
                 String[] msgToAr = msg.split(" ");
                 String st = "";
-                for (int i = 0; i < msgToAr.length; i++) {
+                for (int i = 0; i < msgToAr.length-1; i++) {
                     st += msgToAr[i+1]+" ";
                 }
 
@@ -146,7 +153,15 @@ public class ClientFormController extends Thread {
                 }
             }
         }catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e+"ftcytf");
         }
+    }
+
+    public void image_send_btnOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select Image");
+        this.filePath = fileChooser.showOpenDialog(stage);
+        printWriter.println(client_lbl.getText() + " " + "img" +filePath.getPath());
     }
 }

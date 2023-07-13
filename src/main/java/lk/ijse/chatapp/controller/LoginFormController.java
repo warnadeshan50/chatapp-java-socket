@@ -12,7 +12,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
@@ -69,7 +68,7 @@ public class LoginFormController implements Initializable {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Choose your image");
             fileChooser.setInitialDirectory(new File("D:\\"));
-            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JPEG image", "*.jpg"), new FileChooser.ExtensionFilter("PNG image", "*.png"), new FileChooser.ExtensionFilter("All images", "*.jpog", "*.png"));
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JPEG image", "*.jpg"), new FileChooser.ExtensionFilter("PNG image", "*.png"), new FileChooser.ExtensionFilter("All images", "*.jpg", "*.png"));
             selectedFiled = fileChooser.showOpenDialog(new Stage());
             if (selectedFiled != null) {
                 Image image = new Image(selectedFiled.getPath());
