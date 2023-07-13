@@ -34,8 +34,6 @@ public class LoginFormController implements Initializable {
     @FXML
     private JFXButton save_btn;
 
-    @FXML
-    private ImageView imageview;
 
     @FXML
     private Circle circle;
